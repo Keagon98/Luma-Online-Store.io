@@ -1,0 +1,132 @@
+@mixin primary-btn {
+    background-color: #3489C7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+}
+
+.product-slider {
+    margin-top: 5%;
+    padding-bottom: 100px;
+}
+
+.swiper-container {
+    max-width: 90%;
+    height: 90vh;
+    padding-bottom: 0;
+  }
+
+  .hot-sellers {
+        margin: 0 auto;
+        max-width: 520px;
+        text-align: center;
+      }
+      
+      .hot-sellers h1 {
+        font-weight: bolder;
+        font-size: 3em;
+        position: relative;
+        background-color: #fff;
+        display: inline-block;
+        padding: 0 1em;
+      }
+      
+      .style-1 {
+        text-transform: none!important;
+      }
+    
+      .style-1:before {
+        content: "";
+        height: 3px;
+        border-top: 2px solid #bdb8b8;
+        position: absolute;
+        width: 300%;
+        top: 50%;
+        left: -100%;
+        z-index: -1;
+      }
+
+  .hot-sellers-sub {
+    text-align: center;
+    font-size: 1.5em;
+    color: #3d3b3b;
+    letter-spacing: 1px;
+    font-weight: lighter;
+}
+
+.swiper-wrapper {
+  padding: 0;
+  margin: 0;
+}
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+   
+  }
+
+  .swiper-slide-inner {
+    padding: 2em;
+  }
+
+  .swiper-slide-inner:hover {
+      border-radius: 20px;
+      background: #f6f5f5;
+      box-shadow:  20px 20px 49px #e9e7e7, 
+             -20px -20px 49px #ffffff;
+     
+  
+  }
+
+
+
+  .item-name {
+      font-size: 1em;
+      font-weight: 400;
+      color: #777171;
+  }
+
+  .item-price {
+      z-index: 3;
+      font-size: 1em;
+      font-weight: bolder;
+      color: #252525;
+      padding: 2em;
+  }
+
+  .cart-rating  {
+      display: flex;
+      align-items: center;
+
+  }
+
+  .cart-rating i, button {
+     margin: 0 0 0 10px;
+  }
+
+  .icons {
+      margin: 0 0 0 15px;
+  }
+
+  .add-btn {
+      @include primary-btn();
+  }
+
+  .add-btn a {
+      color: #fff;
+  }

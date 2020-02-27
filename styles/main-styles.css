@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 .top-panel {
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,6 +21,8 @@
 
 .top-section {
   background: #818483;
+  position: absolute;
+  width: 100%;
 }
 
 .top-section-links {
@@ -34,6 +43,7 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+  margin-top: 1.5em;
   margin-right: 5em;
 }
 
@@ -41,6 +51,15 @@
   color: #fff;
   font-size: .9em;
   margin-left: 10px;
+}
+
+.nav-search {
+  z-index: 3;
+  margin-bottom: -15em;
+}
+
+.logo-search {
+  background-color: #fff;
 }
 
 .nav-search .logo-search {
@@ -57,13 +76,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1em 5em;
-  margin-bottom: -20px;
+  padding: 0 4em;
+  margin-bottom: -1.5em;
 }
 
 .nav-search .logo-search img {
   padding: 0;
-  height: 125px;
+  height: 120px;
   width: 10%;
 }
 
@@ -109,6 +128,7 @@
   border-radius: 0;
   cursor: pointer;
   font-size: 20px;
+  margin: 0;
 }
 
 .cart-search .shop-cart {
@@ -138,99 +158,497 @@
   padding: 1em;
 }
 
+.nav-links li a:hover {
+  color: #327de6;
+}
+
 .nav-links li a {
   font-weight: bolder;
   color: #6b6a6a;
 }
 
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.slider {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.grid-section {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-heading {
+  margin: 0 auto;
+  max-width: 520px;
+  text-align: center;
+}
+
+.grid-heading h1 {
+  font-weight: bolder;
+  font-size: 3em;
+  position: relative;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.style-1 {
+  text-transform: none !important;
+}
+
+.style-1:before {
+  content: "";
+  height: 3px;
+  border-top: 2px solid #bdb8b8;
+  position: absolute;
+  width: 300%;
+  top: 50%;
+  left: -100%;
+  z-index: -1;
+}
+
 .image-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
-  -ms-grid-rows: (5vw)[8];
-      grid-template-rows: repeat(8, 5vw);
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(50px, auto);
   grid-gap: 1em;
-  padding: 1em;
+  padding: 0 2em;
+  grid-area: auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .image-grid img {
   width: 100%;
-  max-height: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
+  -o-object-position: center;
+     object-position: center;
+  cursor: pointer;
 }
 
-.box1 {
+.opacity img {
+  -webkit-transition: .50s ease-in-out;
+  transition: .50s ease-in-out;
+  opacity: .5;
+}
+
+.opacity:hover img {
+  opacity: 2;
+}
+
+.image-grid-1 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
-  grid-column: 1 / span 12;
+  grid-column: 1 / 13;
   -ms-grid-row: 1;
-  -ms-grid-row-span: 6;
-  grid-row: 1 / span 6;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
 }
 
-.box2 {
+.image-grid-2 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-column: 1 / span 3;
-  -ms-grid-row: 7;
-  -ms-grid-row-span: 30;
-  grid-row: 7 / span 30;
+  grid-column: 1 / 4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  grid-row: 2 / 6;
 }
 
-.box3 {
+.image-grid-3 {
   background-color: #FEDD16;
   -ms-grid-column: 4;
   -ms-grid-column-span: 9;
-  grid-column: 4 / span 9;
-  -ms-grid-row: 7;
-  -ms-grid-row-span: 8;
-  grid-row: 7 / span 8;
+  grid-column: 4 /  13;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
 }
 
-.box3 img {
-  -o-object-fit: cover;
-     object-fit: cover;
+.image-grid-3 img {
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
-  margin-top: 30px;
-  right: 40%;
-  max-height: 250px;
+  top: 7;
+  left: 10;
+  max-height: 150px;
   width: 30%;
 }
 
-.box4 {
+.image-grid-4 {
   -ms-grid-column: 4;
   -ms-grid-column-span: 5;
-  grid-column: 4 / span 5;
-  -ms-grid-row: 15;
-  -ms-grid-row-span: 22;
-  grid-row: 15 / span 22;
+  grid-column: 4 /  9;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5 /  6;
 }
 
-.box5 {
+.image-grid-5 {
   -ms-grid-column: 9;
   -ms-grid-column-span: 4;
-  grid-column: 9 / span 4;
-  -ms-grid-row: 15;
-  -ms-grid-row-span: 42;
-  grid-row: 15 / span 42;
+  grid-column: 9 /  13;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 2;
+  grid-row: 5 / 7;
 }
 
-.box6 {
+.image-grid-6 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 8;
-  grid-column: 1 / span 8;
-  -ms-grid-row: 37;
-  -ms-grid-row-span: 20;
-  grid-row: 37/ span 20;
+  grid-column: 1 /  9;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6 /  7;
+}
+
+.img-content {
+  position: absolute;
+  z-index: 2;
+}
+
+.product-slider {
+  margin-top: 5%;
+  padding-bottom: 100px;
+}
+
+.swiper-container {
+  max-width: 90%;
+  height: 90vh;
+  padding-bottom: 0;
+}
+
+.hot-sellers {
+  margin: 0 auto;
+  max-width: 520px;
+  text-align: center;
+}
+
+.hot-sellers h1 {
+  font-weight: bolder;
+  font-size: 3em;
+  position: relative;
+  background-color: #fff;
+  display: inline-block;
+  padding: 0 1em;
+}
+
+.style-1 {
+  text-transform: none !important;
+}
+
+.style-1:before {
+  content: "";
+  height: 3px;
+  border-top: 2px solid #bdb8b8;
+  position: absolute;
+  width: 300%;
+  top: 50%;
+  left: -100%;
+  z-index: -1;
+}
+
+.hot-sellers-sub {
+  text-align: center;
+  font-size: 1.5em;
+  color: #3d3b3b;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+.swiper-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #ffffff;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.swiper-slide-inner {
+  padding: 2em;
+}
+
+.swiper-slide-inner:hover {
+  border-radius: 20px;
+  background: #f6f5f5;
+  -webkit-box-shadow: 20px 20px 49px #e9e7e7,  -20px -20px 49px #ffffff;
+          box-shadow: 20px 20px 49px #e9e7e7,  -20px -20px 49px #ffffff;
+}
+
+.item-name {
+  font-size: 1em;
+  font-weight: 400;
+  color: #777171;
+}
+
+.item-price {
+  z-index: 3;
+  font-size: 1em;
+  font-weight: bolder;
+  color: #252525;
+  padding: 2em;
+}
+
+.cart-rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-rating i, button {
+  margin: 0 0 0 10px;
+}
+
+.icons {
+  margin: 0 0 0 15px;
+}
+
+.add-btn {
+  background-color: #3489C7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+}
+
+.add-btn a {
+  color: #fff;
+}
+
+footer {
+  background: #F4F4F4;
+}
+
+.footer-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1em 3em;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-links ul {
+  list-style: none;
+  font-size: .9em;
+  padding: 0 3em;
+}
+
+.footer-links ul li {
+  color: #8E8E8E;
+  line-height: 2em;
+}
+
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.subscribe i {
+  position: relative;
+  border: 2px #d4d1d1 solid;
+  border-right: none;
+  background: #fff;
+}
+
+.subscribe .icon {
+  padding: 8px;
+  color: #d4d1d1;
+}
+
+.subscribe .input-field {
+  width: 50%;
+  padding: 8px;
+  border: 2px #d4d1d1 solid;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.subscribe .input-field::-webkit-input-placeholder {
+  color: #d4d1d1;
+}
+
+.subscribe .input-field:-ms-input-placeholder {
+  color: #d4d1d1;
+}
+
+.subscribe .input-field::-ms-input-placeholder {
+  color: #d4d1d1;
+}
+
+.subscribe .input-field::placeholder {
+  color: #d4d1d1;
+}
+
+.subscribe .subscribe-btn {
+  background-color: #3489C7;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+.subscribe .subscribe-btn a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.bottom-footer {
+  background: #8E8E8E;
+  text-align: center;
+  margin: 0;
+  padding: .9em 1em;
+}
+
+.bottom-footer p {
+  margin: 0;
+  color: #fff;
+  font-size: .9em;
+}
+
+html {
+  outline: hidden;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "IBM Plex Sans";
+  font-family: 'IBM Plex Sans';
 }
 
 a {

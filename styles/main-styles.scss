@@ -1,14 +1,25 @@
 @import "top-panel";
+@import"banner-slider";
 @import "image-grid-container";
+@import "product-slider";
+@import "footer";
+
 
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap');
+
+
+html {
+    outline: hidden;
+}
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'IBM Plex Sans', ;
+    font-family: 'IBM Plex Sans' ; 
 }
 
 a {
     text-decoration: none;
 }
+
+

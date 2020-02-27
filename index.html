@@ -5,65 +5,261 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Luma Online | Home</title>
         <link rel="stylesheet" href="styles/main-styles.css">
-        <link rel="icon" href="./images/Colour-wheel.png" sizes="16x16 32x32" type="image/png">
+        <link rel="icon" href="./assets/images/Colour-wheel.png" sizes="16x16 32x32" type="image/png">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
         <script src="https://kit.fontawesome.com/a255ceb981.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <main class="main-container">
-            <div class="top-panel">
-                <section class="top-section">
-                    <div class="top-section-links">
-                            <a href="">Sign in</a>
-                            <p>or</p>
-                            <a href="">Create an Account</a>
-                        </ul>
-                    </div>
-                </section>
-                <section class="nav-search">
-                    <div class="logo-search">
-                        <img id="Luma-logo" src="./images/Component 1.png" alt="luma-logo">
-                            <div class="cart-search">
-                                <div class="search">
-                                    <input type="text" class="search-text" placeholder="Search entire store here...">
-                                    <button type="submit" class="search-btn">
-                                      <i class="fa fa-search"></i>
-                                   </button>
-                                 </div>
-                                <i class="fas fa-shopping-cart shop-cart"></i>
-                            </div>
-                    </div>
-                    <nav class="main-navbar">
-                        <ul class="nav-links">
-                            <li><a href="">What's new</a></li>
-                            <li><a href="">Women</a></li>
-                            <li><a href="">Men</a></li>
-                            <li><a href="">Gear</a></li>
-                            <li><a href="">Training</a></li>
-                            <li><a href="">Sale</a></li>
-                        </ul>
-                    </nav>
-                </section>
+        <header class="top-panel">
+            <section class="top-section">
+                <div class="top-section-links">
+                        <a href="">Sign in</a>
+                        <p>or</p>
+                        <a href="">Create an Account</a>
+                    </ul>
+                </div>
+            </section>
+            <section class="nav-search" >
+                <div class="logo-search">
+                    <img id="Luma-logo" src="./assets/images/Component 1.png" alt="luma-logo">
+                        <div class="cart-search">
+                            <div class="search">
+                                <input type="text" class="search-text" placeholder="Search entire store here...">
+                                <button type="submit" class="search-btn">
+                                  <i class="fa fa-search"></i>
+                               </button>
+                             </div>
+                            <i class="fas fa-shopping-cart shop-cart"></i>
+                        </div>
+                </div>
+                <nav class="main-navbar" id="fixed-header">
+                    <ul class="nav-links">
+                        <li><a href="">What's new</a></li>
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="">Men</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </header>
+
+        <main class="main-container" style="margin-top: 13%;">
+          <!-- Swiper -->
+          <div class="container">
+              <div class="slider">
+                <img src="/assets/Banner-slider-images/Group 1.png" style="width:100%">
+              </div>
+            
+              <div class="slider">
+                <img src="/assets/Banner-slider-images/Group 2.png" style="width:100%">
+              </div>
+            
+              <div class="slider">
+                <img src="/assets/Banner-slider-images/Group 3.png" style="width:100%">
+            </div>  
+              
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+          
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="/assets/Banner-slider-images/Group 1.png" style="width:100%" onclick="currentSlide(1)" alt="">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="/assets/Banner-slider-images/Group 2.png" style="width:100%" onclick="currentSlide(2)" alt="">
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="/assets/Banner-slider-images/Group 3.png" style="width:100%" onclick="currentSlide(3)" alt="">
+              </div>
             </div>
-            <div class="image-grid">
-                <div class="box1">
-                    <img src="./grid-images/home-main.jpg" alt="">
-                </div>
-                <div class="box2">
-                    <img src="./grid-images/home-pants.jpg" alt="">
-                </div>
-                <div class="box3">
-                    <img src="./grid-images/home-t-shirts.png" alt="">
-                </div>
-                <div class="box4">
-                    <img src="./grid-images/home-erin.jpg" alt="">
-                </div>
-                <div class="box5">
-                    <img src="./grid-images/home-performance.jpg" alt="">
-                </div>
-                <div class="box6">
-                    <img src="./grid-images/home-eco.jpg" alt="">
-                </div>
+          </div>
+        
+
+            <section class="grid-section">
+              <div class="grid-heading">
+                <h1 class="style-1">Shop Now</h1>
+              </div>
+              <div class="image-grid">
+                  <div class="image-grid-1 opacity">
+                      <img src="./assets/grid-images/home-main.jpg" alt="">
+                  </div>
+                  <div class="image-grid-2 opacity">
+                      <img src="./assets/grid-images/home-pants.jpg" alt="">
+                  </div>
+                  <div class="image-grid-3 opacity">
+                      <img src="./assets/grid-images/home-t-shirts.png" alt="">
+                  </div>
+                  <div class="image-grid-4 opacity">
+                      <img src="./assets/grid-images/home-erin.jpg" alt="">
+                  </div>
+                  <div class="image-grid-5 opacity">
+                      <img src="./assets/grid-images/home-performance.jpg" alt="">
+                  </div>
+                  <div class="image-grid-6 opacity">
+                      <img src="./assets/grid-images/home-eco.jpg" alt="">
+                  </div>
+              </div>
+          </section>
+
+          <section class="product-slider">
+            <div class="hot-sellers">
+              <h1 class="style-1">Hot Sellers</h1>
             </div>
+            <h2 class="hot-sellers-sub">
+              Here is what's trending on Luma right now
+            </h2>
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-inner">
+                      <img src="./assets/Product-slider-images/mh07-gray_main-removebg-preview.png" alt="">
+                      <h3 class="item-name">
+                        Hero Hoodie
+                      </h3>
+                      <p class="item-price">
+                        R550.00
+                      </p>
+                      <div class="cart-rating">
+                        <button type="button" class="add-btn"><a href="">Add to cart</a></button>
+                        <div class="icons">
+                        <i class="far fa-heart"></i>
+                        <i class="fas fa-chart-bar"></i>
+                      </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-inner">
+                      <img src="./assets/Product-slider-images/mb02-gray-0-removebg-preview.png" alt="">
+                      <h3 class="item-name">
+                        Fusion Backpack
+                      </h3>
+                      <p class="item-price">
+                        R610.00
+                      </p>
+                      <div class="cart-rating">
+                        <button type="button" class="add-btn"><a href="">Add to cart</a></button>
+                        <div class="icons">
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-chart-bar"></i>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-inner">
+                      <img src="./assets/Product-slider-images/lt02-removebg-preview.png" alt="">
+                      <h3 class="item-name">
+                        LifeLong Fitness IV
+                      </h3>
+                      <p class="item-price">
+                        R170.00
+                      </p>
+                      <div class="cart-rating">
+                        <button type="button" class="add-btn"><a href="">Add to cart</a></button>
+                        <div class="icons">
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-chart-bar"></i>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-inner">
+                      <img src="./assets/Product-slider-images/ws12-orange_main-removebg-preview.png" alt="">
+                      <h3 class="item-name">
+                        Radiant Tee
+                      </h3>
+                      <p class="item-price">
+                        R250.00
+                      </p>
+                      <div class="cart-rating">
+                        <button type="button" class="add-btn"><a href="">Add to cart</a></button>
+                        <div class="icons">
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-chart-bar"></i>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-inner">
+                      <img src="./assets/Product-slider-images/wt09-white_main-removebg-preview.png" alt="">
+                      <h3 class="item-name">
+                        Radiant Tee
+                      </h3>
+                      <p class="item-price">
+                        R380.00
+                      </p>
+                      <div class="cart-rating">
+                        <button type="button" class="add-btn"><a href="">Add to cart</a></button>
+                        <div class="icons">
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-chart-bar"></i>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="swiper-slide-inner">
+                      <img src="./assets/Product-slider-images/mt07-gray_main-removebg-preview.png" alt="">
+                      <h3 class="item-name">
+                        Argus All-Weather Tank
+                      </h3>
+                      <p class="item-price">
+                        R250.00
+                      </p>
+                      <div class="cart-rating">
+                        <button type="button" class="add-btn"><a href="">Add to cart</a></button>
+                        <div class="icons">
+                          <i class="far fa-heart"></i>
+                          <i class="fas fa-chart-bar"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </section>
+
+              <footer>
+                <div class="footer-top">
+                  <div class="footer-links">
+                    <ul>
+                      <li>About Us</li>
+                      <li>Customer Service</li>
+                    </ul>
+                    <ul>
+                      <li>Privacy and Cookie Policy</li>
+                      <li>Search Terms</li>
+                      <li>Contact Us</li>
+                      <li>Orders and Returns</li>
+                      <li>Advanced Search</li>
+                    </ul>
+                  </div>
+                  <div class="subscribe">
+                    <i class="far fa-envelope icon"></i>
+                    <input class="input-field" type="text" placeholder="Enter your Email here...">
+                    <button class="subscribe-btn"><a href="#">Subscribe</a></button>
+                  </div>
+                </div>
+                  <div class="bottom-footer">
+                   <p>Copyright© 2020 Luma. All rights reserved</p> 
+                  </div>
+              </footer>
         </main>
+
+        
+        <script src="main.js" aynce defer></script>
+        <script src="./slider-js/banner-slider.js" aynce defer></script>
+        <script src="./slider-js//product-slider.js" async defer></script>
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+       
+        
     </body>
     </html>
