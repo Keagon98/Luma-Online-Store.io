@@ -57,6 +57,8 @@
 .swiper-wrapper {
   padding: 0;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
   .swiper-slide {
     text-align: center;
