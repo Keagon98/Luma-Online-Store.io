@@ -137,6 +137,7 @@
 }
 
 .shop-cart:hover {
+  cursor: pointer;
   color: #327de6;
 }
 
@@ -173,6 +174,8 @@
 
 img {
   vertical-align: middle;
+  width: 100%;
+  height: auto;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
@@ -211,7 +214,7 @@ img {
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 112px;
   border-radius: 3px 0 0 3px;
 }
 
