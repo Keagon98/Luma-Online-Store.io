@@ -82,8 +82,8 @@
 
 .nav-search .logo-search img {
   padding: 0;
-  height: 120px;
-  width: 10%;
+  height: 100px;
+  width: auto;
 }
 
 .cart-search {
@@ -404,10 +404,6 @@ img {
   z-index: 2;
 }
 
-.grid-section, .product-slider {
-  padding: 0 5em;
-}
-
 .product-slider {
   margin-top: 5%;
   padding-bottom: 100px;
@@ -466,6 +462,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 4em 0;
 }
 
 .swiper-slide {
@@ -662,5 +659,9 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.grid-section, .product-slider {
+  padding: 0 5em;
 }
 /*# sourceMappingURL=main-styles.css.map */
