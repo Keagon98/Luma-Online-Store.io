@@ -16,7 +16,7 @@
 
 - Functioning add to cart
 
-- Image sliders and Carousels
+- Image sliders
 
 # Author 
 
