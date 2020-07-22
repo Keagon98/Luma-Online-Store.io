@@ -48,7 +48,7 @@
 .nav-search .logo-search{
     @include flexContent(row, space-between);
     align-items: center;
-    padding: 0 4em;
+    padding: 0 7em;
     margin-bottom: -1.5em;
 }
 
@@ -100,6 +100,10 @@
 .cart-search .shop-cart {
     color: #a19f9f;
     margin-left: 10px;
+}
+
+.shop-cart:hover {
+    color: #327de6;
 }
 
 .main-navbar {
