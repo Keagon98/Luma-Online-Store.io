@@ -126,6 +126,10 @@
       margin: 0 0 0 15px;
   }
 
+  .icons:hover {
+    color: #3489C7
+  }
+
   .add-btn {
       @include primary-btn();
   }
